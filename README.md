@@ -51,7 +51,7 @@ The slider's border can be adapted using by creating a custom object named `slid
 
 Please note that both `slider` as well as `sliderBorder` support all attributes of React Native's slider component. A complete example can be found in `examples/SliderButtonStyle.js`.
 
-The custom style object can be applied to the component using the `stylesheet` property (see section [Properties](/Properties/)).
+The custom style object can be applied to the component using the `stylesheet` property (see section [Properties](#properties)).
 
 # Properties
 
@@ -63,7 +63,7 @@ The custom style object can be applied to the component using the `stylesheet` p
 
 `onTrigger` (function) – Callback invoked when the user moves the thumb beyond the completion value. No further parameters are passed to the callback method.
 
-`stylesheet` (object) – Custom style for the slider button, as described in the [custom style section](/README.MD#Using a custom style/).
+`stylesheet` (object) – Custom style for the slider button, as described in the [custom style section](#using-a-custom-style).
 
 `minimumValue` (number) – The minimum allowed value (see [React Native's documentation](https://facebook.github.io/react-native/docs/sliderios.html)).
 
