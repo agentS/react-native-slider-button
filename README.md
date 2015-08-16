@@ -63,7 +63,7 @@ The custom style object can be applied to the component using the `stylesheet` p
 
 `onTrigger` (function) – Callback invoked when the user moves the thumb beyond the completion value. No further parameters are passed to the callback method.
 
-`stylesheet` (object) – Custom style for the slider button, as described in the [custom style section](/Using a custom style/).
+`stylesheet` (object) – Custom style for the slider button, as described in the [custom style section](/README.MD#Using a custom style/).
 
 `minimumValue` (number) – The minimum allowed value (see [React Native's documentation](https://facebook.github.io/react-native/docs/sliderios.html)).
 
