@@ -1,0 +1,18 @@
+{
+	"name": "react-native-slider-button",
+	"author": "Lukas Schoerghuber <lukas.schoerghuber@posteo.at>",
+	"version": "0.0.0",
+	"description": "Button triggered once the user slides beyond a specific treshold. Furthermore, the slider's thumb can be replaced with a custom image.",
+	"keywords":
+	[
+		"react-component",
+		"react-native",
+		"ios"
+	],
+	"peerDependencies":
+	{
+		"react-native": ">=0.8.0"
+	},
+	
+	"main": "SliderButton.js"
+}
