@@ -8,6 +8,7 @@ A (hopefully simple enough) [demo project](https://github.com/agentS/reactNative
 
 # Add it to your project
 Run `npm install --save react-native-slider-button`
+
 `var SliderButton = require("react-native-slider-button");`
 
 # Basic usage
