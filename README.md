@@ -2,7 +2,7 @@
 Slider button inspired by the slide to unlock widget with an optional animation manipulating the text's transparency. Of course, both the animation duration and text can be customized too.
 
 # Demo
-//TODO: add animated GIF
+![Slider button demo](https://cloud.githubusercontent.com/assets/5032736/9308065/2fc31704-4502-11e5-89a6-d9ef4e619034.gif)
 
 A (hopefully simple enough) [demo project](https://github.com/agentS/reactNativeSliderButtonDemo) is available too.
 
