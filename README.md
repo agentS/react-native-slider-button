@@ -6,7 +6,7 @@ Slider button inspired by the slide to unlock widget with an optional animation 
 
 # Add it to your project
 Run `npm install --save react-native-slider-button`
-'var SliderButton = require("react-native-slider-button");'
+`var SliderButton = require("react-native-slider-button");`
 
 # Basic usage
     <SliderButton
