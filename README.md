@@ -3,11 +3,13 @@ Slider button inspired by the slide to unlock widget with an optional animation 
 
 # Demo
 
+![Slider button demo](https://cloud.githubusercontent.com/assets/5032736/9308065/2fc31704-4502-11e5-89a6-d9ef4e619034.gif)
 
 A (hopefully simple enough) [demo project](https://github.com/agentS/reactNativeSliderButtonDemo) is available too.
 
 # Add it to your project
 Run `npm install --save react-native-slider-button`
+
 `var SliderButton = require("react-native-slider-button");`
 
 # Basic usage
