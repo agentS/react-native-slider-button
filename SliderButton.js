@@ -53,9 +53,11 @@ var SliderButton = React.createClass(
 	}),
 	animationDuration: Constants.ANIMATION_DURATION,
 	sliderCompletionValue: Constants.SLIDER_COMPLETION_VALUE,
+	resetAfterAction: true,
 	getDefaulProps: function()
 	{
 		return {
+			resetAfterAction: true,
 			textAnimated: true,
 			animationDuration: Constants.ANIMATION_DURATION,
 			sliderTriggerValue: Constants.SLIDER_COMPLETION_VALUE
@@ -65,11 +67,15 @@ var SliderButton = React.createClass(
 	{
 		if (newProperties.animationDuration !== undefined)
 		{
-			this.animationDuration = this.newProperties.animationDuration;
+			this.animationDuration = newProperties.animationDuration;
 		}
 		if (newProperties.sliderCompletionValue !== undefined)
 		{
-			this.sliderCompletionValue = this.newProperties.sliderCompletionValue;
+			this.sliderCompletionValue = newProperties.sliderCompletionValue;
+		}
+		if (newProperties.resetAfterAction !== undefined)
+		{
+			this.resetAfterAction = newProperties.resetAfterAction;
 		}
 	},
 	componentWillMount: function()
@@ -82,6 +88,10 @@ var SliderButton = React.createClass(
 		{
 			this.sliderCompletionValue = this.props.sliderCompletionValue;
 		} 
+		if (this.props.resetAfterAction !== undefined)
+		{
+			this.resetAfterAction = this.props.resetAfterAction;
+		}
 	},
 	render: function()
 	{
@@ -181,6 +191,12 @@ var SliderButton = React.createClass(
 					{
 						this.props.onTrigger();
 					}
+				}
+				
+				// check if the user wishes to reset the slider automatically
+				if (this.resetAfterAction === true)
+				{
+					this.setState({ timestamp: Date.now() });
 				}
 			}
 			else

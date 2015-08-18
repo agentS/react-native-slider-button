@@ -2,7 +2,7 @@
 Slider button inspired by the slide to unlock widget with an optional animation manipulating the text's transparency. Of course, both the animation duration and text can be customized too.
 
 # Demo
-//TODO: add animated GIF
+
 
 A (hopefully simple enough) [demo project](https://github.com/agentS/reactNativeSliderButtonDemo) is available too.
 
@@ -63,6 +63,8 @@ The custom style object can be applied to the component using the `stylesheet` p
 `onTrigger` (function) – Callback invoked when the user moves the thumb beyond the completion value. No further parameters are passed to the callback method.
 
 `stylesheet` (object) – Custom style for the slider button, as described in the [custom style section](#using-a-custom-style).
+
+`resetAfterAction` (boolean) – If this value is set to false the slider will remain in its position after the action is triggered. Otherwise, the slider will "jump" back to its initial value.
 
 `minimumValue` (number) – The minimum allowed value (see [React Native's documentation](https://facebook.github.io/react-native/docs/sliderios.html)).
 
