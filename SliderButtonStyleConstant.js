@@ -24,6 +24,7 @@ module.exports = StyleSheet.create
 	},
 	slider:
 	{
-		opacity: 0.8
+		opacity: 0.8,
+		padding: 0
 	}
 });

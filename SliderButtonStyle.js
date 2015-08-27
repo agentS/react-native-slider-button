@@ -4,7 +4,8 @@ var React = require("react-native");
 
 var
 {
-	StyleSheet
+	StyleSheet,
+	PixelRatio
 } = React;
 
 module.exports = StyleSheet.create
@@ -22,6 +23,6 @@ module.exports = StyleSheet.create
 	sliderBorder:
 	{
 		borderWidth: 2,
-		borderRadius: 20,
+		borderRadius: PixelRatio.getPixelSizeForLayoutSize(10),
 	}
 });
