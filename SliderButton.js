@@ -115,13 +115,14 @@ var SliderButton = React.createClass(
 		}
 		
 		return (
-			{animatedTextContainer}
-			<View style={SliderButtonStyleConstant.container} ref={"vContainer"}>
-				<SliderIOS key={this.state.timestamp}
-					style={[styles.slider, styles.sliderBorder, SliderButtonStyleConstant.slider]}
-					onSlidingComplete={(newValue) => this.onSliderValueChanged(newValue)}
-					{...this.props}/>
-			</View>
+				<View style={SliderButtonStyleConstant.container} ref={"vContainer"}>
+					{animatedTextContainer}
+
+					<SliderIOS key={this.state.timestamp}
+						style={[styles.slider, styles.sliderBorder, SliderButtonStyleConstant.slider]}
+						onSlidingComplete={(newValue) => this.onSliderValueChanged(newValue)}
+						{...this.props}/>
+				</View>
 		);
 	},
 	componentDidMount: function()
