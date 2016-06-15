@@ -60,7 +60,8 @@ var SliderButton = React.createClass(
 			resetAfterAction: true,
 			textAnimated: true,
 			animationDuration: Constants.ANIMATION_DURATION,
-			sliderTriggerValue: Constants.SLIDER_COMPLETION_VALUE
+			sliderTriggerValue: Constants.SLIDER_COMPLETION_VALUE,
+			rightToLeft: false
 		};
 	},
 	componentWillReceiveProps: function(newProperties)
@@ -77,6 +78,10 @@ var SliderButton = React.createClass(
 		{
 			this.resetAfterAction = newProperties.resetAfterAction;
 		}
+		if (newProperties.rightToLeft !== undefined)
+		{
+			this.rightToLeft = newProperties.rightToLeft;
+		}
 	},
 	componentWillMount: function()
 	{
@@ -91,6 +96,10 @@ var SliderButton = React.createClass(
 		if (this.props.resetAfterAction !== undefined)
 		{
 			this.resetAfterAction = this.props.resetAfterAction;
+		}
+		if (this.props.rightToLeft !== undefined)
+		{
+			this.rightToLeft = this.props.rightToLeft;
 		}
 	},
 	render: function()
@@ -114,6 +123,12 @@ var SliderButton = React.createClass(
 			);
 		}
 		
+		var actualValue = 0;
+		if (this.rightToLeft === true)
+		{
+			actualValue = 100;
+		}
+
 		return (
 				<View style={SliderButtonStyleConstant.container} ref={"vContainer"}>
 					{animatedTextContainer}
@@ -121,6 +136,7 @@ var SliderButton = React.createClass(
 					<SliderIOS key={this.state.timestamp}
 						style={[styles.slider, styles.sliderBorder, SliderButtonStyleConstant.slider]}
 						onSlidingComplete={(newValue) => this.onSliderValueChanged(newValue)}
+						minimumValue={0} maximumValue={100} value={actualValue}
 						{...this.props}/>
 				</View>
 		);
@@ -183,7 +199,24 @@ var SliderButton = React.createClass(
 	{
 		if ((arguments[0] !== undefined) && (arguments[0] !== null))
 		{
-			if (newValue > this.sliderCompletionValue)
+			var buttonActivated = false;
+			if (this.rightToLeft === false)
+			{
+				if (newValue > this.sliderCompletionValue)
+				{
+					buttonActivated = true;
+				}
+			}
+			else
+			{
+				if (newValue < (100 - this.sliderCompletionValue))
+				{
+					buttonActivated = true;
+				}
+			}
+			
+
+			if (buttonActivated === true)
 			{
 				if ((this.props.onTrigger !== undefined) && (this.props.onTrigger !== null))
 				{

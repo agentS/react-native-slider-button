@@ -68,6 +68,8 @@ The custom style object can be applied to the component using the `stylesheet` p
 
 `resetAfterAction` (boolean) – If this value is set to false the slider will remain in its position after the action is triggered. Otherwise, the slider will "jump" back to its initial value.
 
+`rightToLeft` (boolean) (default: `false`) - This value allows to control the direction the user has to slide. In case it is set to true the user has to slide from 100 (right) to (100 - the value of `sliderCompletionValue`).
+
 `minimumValue` (number) – The minimum allowed value (see [React Native's documentation](https://facebook.github.io/react-native/docs/sliderios.html)).
 
 `maximumValue` (number) – The maximum allowed value (see [React Native's documentation](https://facebook.github.io/react-native/docs/sliderios.html)).
