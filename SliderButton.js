@@ -54,6 +54,7 @@ var SliderButton = React.createClass(
 	animationDuration: Constants.ANIMATION_DURATION,
 	sliderCompletionValue: Constants.SLIDER_COMPLETION_VALUE,
 	resetAfterAction: true,
+	rightToLeft: false,
 	getDefaulProps: function()
 	{
 		return {
