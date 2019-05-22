@@ -1,6 +1,11 @@
 # react-native-slider-button
 Slider button inspired by the slide to unlock widget with an optional animation manipulating the text's transparency. Of course, both the animation duration and text can be customized too.
 
+# Deprecation Warning
+
+Since I don't have access to an Apple computer anymore, I am unable to maintain this project.
+Please look for alternative solutions and **do not use this library, as it targets a rather old version of React Native.**
+
 # Demo
 
 ![Slider button demo](https://cloud.githubusercontent.com/assets/5032736/9308065/2fc31704-4502-11e5-89a6-d9ef4e619034.gif)
